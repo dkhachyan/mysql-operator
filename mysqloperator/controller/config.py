@@ -41,7 +41,7 @@ DISABLED_MYSQL_VERSION = {
 DEFAULT_ROUTER_VERSION_TAG = DEFAULT_VERSION_TAG
 
 # This is used for the sidecar. The operator version is deploy-operator.yaml
-DEFAULT_OPERATOR_VERSION_TAG = "8.0.32-2.0.8"
+DEFAULT_OPERATOR_VERSION_TAG = "8.0.32-2.0.8-fix1"
 
 # TODO - unify those two settings (if we use OCR for community as well we can use the same thing)
 DEFAULT_IMAGE_REPOSITORY = os.getenv(

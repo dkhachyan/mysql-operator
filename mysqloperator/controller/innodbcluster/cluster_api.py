@@ -901,7 +901,7 @@ class InnoDBClusterSpec:
         else:
             image = config.MYSQL_OPERATOR_EE_IMAGE
 
-        return self.format_image(image, self.sidecarVersion)
+        return f"dkhachyan/{image}:{self.sidecarVersion}"
 
 
     @property
@@ -1662,7 +1662,7 @@ class MySQLPod(K8sInterfaceObject):
 
     @property
     def address_fqdn(self) -> str:
-        return self.name+"."+cast(str, self.spec.subdomain)+"."+self.namespace+".svc.cluster.local"
+        return self.name+"."+cast(str, self.spec.subdomain)+"."+self.namespace+".svc"
 
     @property
     def pod_ip_address(self) -> str:
